@@ -167,6 +167,7 @@ public class VPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTPArchivos.setBackground(new java.awt.Color(51, 51, 51));
+        jTPArchivos.setForeground(new java.awt.Color(51, 51, 51));
         jTPArchivos.setAutoscrolls(true);
         jTPArchivos.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
         jTPArchivos.addMouseListener(new java.awt.event.MouseAdapter() {
