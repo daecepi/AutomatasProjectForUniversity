@@ -54,7 +54,7 @@ public class VPrincipal extends javax.swing.JFrame {
         inicializarMouseListener();
         this.jMINuevoActionPerformed(null);
     }
-
+    
     private void actualizarVista() {
         if (this.jTPArchivos.getTabCount() == 0) {
             this.jMIPGuardar.setEnabled(false);
@@ -116,18 +116,21 @@ public class VPrincipal extends javax.swing.JFrame {
         });
 
         jMIPCerrarActual = new JMenuItem("Cerrar actual");
+        this.jMIPCerrarActual.setIcon(this.jMICerrar.getIcon());
         jMIPCerrarActual.addActionListener((action) -> {
             this.jTPArchivos.remove(this.jTPArchivos.getSelectedIndex());
             this.actualizarVista();
         });
 
         this.jMIPCerrarTodo = new JMenuItem("Cerrar todo");
+        this.jMIPCerrarTodo.setIcon(this.jMICerrar.getIcon());
         this.jMIPCerrarTodo.addActionListener((ActionEvent e) -> {
             this.jTPArchivos.removeAll();
             this.actualizarVista();
         });
 
         this.jMIPVerificar = new JMenuItem("Verificar actual");
+        this.jMIPVerificar.setIcon(this.jMIVerificar.getIcon());
         this.jMIPVerificar.setAccelerator(javax.swing.KeyStroke.getKeyStroke(
                 java.awt.event.KeyEvent.VK_V,
                 java.awt.event.InputEvent.ALT_MASK));
@@ -273,7 +276,7 @@ public class VPrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTPArchivos, javax.swing.GroupLayout.DEFAULT_SIZE, 417, Short.MAX_VALUE)
+            .addComponent(jTPArchivos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 417, Short.MAX_VALUE)
         );
 
         pack();
