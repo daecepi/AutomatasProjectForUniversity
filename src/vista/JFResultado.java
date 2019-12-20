@@ -52,9 +52,9 @@ public class JFResultado extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jBCerrar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTPResultados = new javax.swing.JTextPane();
-        jBCerrar = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMIGuardarResultado = new javax.swing.JMenuItem();
@@ -63,10 +63,8 @@ public class JFResultado extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
 
-        jTPResultados.setEditable(false);
-        jScrollPane1.setViewportView(jTPResultados);
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setForeground(new java.awt.Color(51, 51, 51));
 
         jBCerrar.setText("Cerrar");
         jBCerrar.addActionListener(new java.awt.event.ActionListener() {
@@ -74,6 +72,9 @@ public class JFResultado extends javax.swing.JFrame {
                 jBCerrarActionPerformed(evt);
             }
         });
+
+        jTPResultados.setEditable(false);
+        jScrollPane1.setViewportView(jTPResultados);
 
         jMenu1.setText("Archivo");
 
@@ -119,14 +120,20 @@ public class JFResultado extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(365, Short.MAX_VALUE)
-                .addComponent(jBCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 355, Short.MAX_VALUE)
+                        .addComponent(jBCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(508, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 486, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jBCerrar)
                 .addContainerGap())
         );

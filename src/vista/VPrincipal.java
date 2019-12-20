@@ -179,6 +179,9 @@ public class VPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jMenuBar1.setBackground(new java.awt.Color(51, 51, 51));
+        jMenuBar1.setForeground(new java.awt.Color(255, 255, 255));
+
         jMenu1.setText("File");
 
         jMINuevo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
@@ -404,7 +407,7 @@ public class VPrincipal extends javax.swing.JFrame {
         //Selecciona el panel de texto que se está utilizando.
         JViewport viewport = ((JScrollPane) jTPArchivos.getSelectedComponent()).getViewport();
         JTextPane textpane = (JTextPane) viewport.getView();
-
+        
         new JFResultado(textpane).setVisible(true);
     }//GEN-LAST:event_jMIVerificarActionPerformed
 
