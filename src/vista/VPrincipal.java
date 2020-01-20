@@ -161,6 +161,8 @@ public class VPrincipal extends javax.swing.JFrame {
         jMIIr = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMIVerificar = new javax.swing.JMenuItem();
+        jMenu5 = new javax.swing.JMenu();
+        jMICompile = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         JMIInformacion = new javax.swing.JMenuItem();
 
@@ -242,6 +244,7 @@ public class VPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu4);
 
+        jMenu3.setForeground(new java.awt.Color(0, 153, 0));
         jMenu3.setText("Depuración");
 
         jMIVerificar.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.ALT_MASK));
@@ -255,6 +258,20 @@ public class VPrincipal extends javax.swing.JFrame {
         jMenu3.add(jMIVerificar);
 
         jMenuBar1.add(jMenu3);
+
+        jMenu5.setText("Compile");
+
+        jMICompile.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jMICompile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/iconos/validator.png"))); // NOI18N
+        jMICompile.setText("Compilar codigo");
+        jMICompile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMICompileActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMICompile);
+
+        jMenuBar1.add(jMenu5);
 
         jMenu2.setText("Ayuda");
 
@@ -425,6 +442,10 @@ public class VPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_JMIInformacionActionPerformed
 
+    private void jMICompileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMICompileActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMICompileActionPerformed
+
     public static void main(String args[]) {
         try {
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows"
@@ -488,6 +509,7 @@ public class VPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem JMIInformacion;
     private javax.swing.JMenuItem jMIAbrir;
     private javax.swing.JMenuItem jMICerrar;
+    private javax.swing.JMenuItem jMICompile;
     private javax.swing.JMenuItem jMIGuardar;
     private javax.swing.JMenuItem jMIIr;
     private javax.swing.JMenuItem jMINuevo;
@@ -496,6 +518,7 @@ public class VPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
