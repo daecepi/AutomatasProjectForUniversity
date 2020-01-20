@@ -182,7 +182,7 @@ public class VPrincipal extends javax.swing.JFrame {
         });
 
         jMenuBar1.setBackground(new java.awt.Color(51, 51, 51));
-        jMenuBar1.setForeground(new java.awt.Color(255, 255, 255));
+        jMenuBar1.setForeground(new java.awt.Color(0, 0, 204));
 
         jMenu1.setText("File");
 
