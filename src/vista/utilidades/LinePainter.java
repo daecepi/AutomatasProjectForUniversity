@@ -94,15 +94,14 @@ public class LinePainter
     private void resetHighlight() {
 		//  Use invokeLater to make sure updates to the Document are completed,
         //  otherwise Undo processing causes the modelToView method to loop.
-
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 try {
                     int offset = component.getCaretPosition();
                     Rectangle currentView = component.modelToView(offset);
-
-					//  Remove the highlighting from the previously highlighted line
-                    if (lastView.y != currentView.y) {
+		    //  Remove the highlighting from the previously highlighted line
+                    if(lastView == null){
+                    }else if (lastView.y != currentView.y) {
                         component.repaint(0, lastView.y, component.getWidth(), lastView.height);
                         lastView = currentView;
                     }

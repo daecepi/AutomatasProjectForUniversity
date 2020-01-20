@@ -16,7 +16,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
- * @author Pedro
+ * @author David E Cermeño Pinzon
  */
 public class JFResultado extends javax.swing.JFrame {
 

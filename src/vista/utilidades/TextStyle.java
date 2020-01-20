@@ -9,7 +9,7 @@ import javax.swing.text.StyleContext;
 
 /**
  *
- * @author Pedro
+ * @author David E Cermeño Pinzon
  */
 public class TextStyle extends DefaultStyledDocument {
 

@@ -6,7 +6,7 @@ import java.io.File;
  * Interfaz que proporciona los métodos necesarios para leer o escribir
  * arcvhivos XMI.
  *
- * @author Pedro
+ * @author David E Cermeño Pinzon
  */
 public interface IArchivo<T> {
 

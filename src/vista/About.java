@@ -10,7 +10,7 @@ import javax.swing.JTextPane;
 
 /**
  *
- * @author Pedro
+ * @author David E Cermeño Pinzon
  */
 public class About extends javax.swing.JDialog {
 

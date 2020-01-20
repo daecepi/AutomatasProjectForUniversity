@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 /**
  *
- * @author Pedro
+ * @author David E Cermeño Pinzon
  */
 public final class AnalizadorLexico implements IAL {
 

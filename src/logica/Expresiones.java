@@ -2,7 +2,7 @@ package logica;
 
 /**
  *
- * @author Pedro
+ * @author David E Cermeño Pinzon
  */
 public class Expresiones {
 

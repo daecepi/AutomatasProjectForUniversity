@@ -3,7 +3,7 @@ package archivos;
 /**
  * Interfaz que declara los servicios que ofrece el componente de persistencia.
  *
- * @author Pedro
+ * @author David E Cermeño Pinzon
  */
 public interface IFP {
 

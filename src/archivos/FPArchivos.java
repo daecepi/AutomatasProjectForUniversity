@@ -3,7 +3,7 @@ package archivos;
 /**
  * Clase que proporciona las instancias de persistencias de archivos.
  *
- * @author Pedro
+ * @author David E Cermeño Pinzon
  */
 public final class FPArchivos {
 

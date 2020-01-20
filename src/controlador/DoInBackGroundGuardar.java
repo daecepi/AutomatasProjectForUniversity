@@ -6,7 +6,7 @@ import javax.swing.SwingWorker;
 
 /**
  *
- * @author Pedro
+ * @author David E Cermeño Pinzon
  * 
  */
 public class DoInBackGroundGuardar extends SwingWorker<Void, Void> {

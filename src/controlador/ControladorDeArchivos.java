@@ -6,7 +6,7 @@ import javax.swing.JTextPane;
 
 /**
  *
- * @author Pedro
+ * @author David E Cermeño Pinzon
  * 
  */
 public class ControladorDeArchivos {

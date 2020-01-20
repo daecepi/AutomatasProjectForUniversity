@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  *
- * @author Pedro
+ * @author David E Cermeño Pinzon
  */
 public interface IAS {
 

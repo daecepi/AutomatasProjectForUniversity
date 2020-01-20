@@ -2,7 +2,7 @@ package logica.analizadorLexico;
 
 /**
  *
- * @author Pedro
+ * @author David E Cermeño Pinzon
  */
 public interface IDefaultToken {
 

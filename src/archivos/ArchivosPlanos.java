@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Pedro
+ * @author David E Cermeño Pinzon
  */
 public class ArchivosPlanos implements IArchivo<String> {
 

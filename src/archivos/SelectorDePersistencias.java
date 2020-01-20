@@ -3,7 +3,7 @@ package archivos;
 /**
  * Clase que permite seleccionar el grupo de persistencias que se desea.
  *
- * @author Pedro
+ * @author David E Cermeño Pinzon
  */
 public final class SelectorDePersistencias implements IFP {
 

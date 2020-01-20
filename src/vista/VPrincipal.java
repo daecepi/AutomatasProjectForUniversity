@@ -27,7 +27,7 @@ import javax.swing.text.StyledEditorKit;
 
 /**
  *
- * @author Pedro
+ * @author David E Cermeño Pinzon
  */
 public class VPrincipal extends javax.swing.JFrame {
 

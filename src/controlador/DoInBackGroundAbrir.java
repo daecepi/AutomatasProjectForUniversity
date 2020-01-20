@@ -9,7 +9,7 @@ import javax.swing.SwingWorker;
  * Clase que extiende de la clase SwingWorker, para cargar el archivo en un
  * hilo aparte, con el fin de no comprometer el hilo principal de la aplicación.
  *
- * @author Pedro
+ * @author David E Cermeño Pinzon
  */
 public class DoInBackGroundAbrir extends SwingWorker<Void, Void> {
 

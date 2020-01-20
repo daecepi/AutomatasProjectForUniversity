@@ -10,7 +10,7 @@ import javax.swing.text.BadLocationException;
 
 /**
  *
- * @author Pedro
+ * @author David E Cermeño Pinzon
  */
 public class DoInBackGroundVerificar extends SwingWorker<Void, Void>{
 
