@@ -55,7 +55,7 @@ public class ControladorDeArchivos {
     *
     */
     public void generarC(JTextPane ep, List<String> codigo){
-        
+        new DoInBackgroundGenerarCodigo(ep, codigo).execute();
     }
 //==============================================================================
 //  Métodos sin cuerpo.
