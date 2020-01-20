@@ -31,11 +31,12 @@ public class DoInBackGroundVerificar extends SwingWorker<Void, Void>{
     }
 
 //==============================================================================
-//  Métodos principales.
+//  Métodos principales.==
 //==============================================================================
     @Override
         protected Void doInBackground() throws Exception {
             pane.setText("Verificando...");
+            System.out.println("Asi luce la cadena" + codigo.get(0));
             List<String> errores = new ControlDeArchivos().verificarCódigo(codigo);
             
             pane.setText(errores.size() + " error(es) encontrados.\n");

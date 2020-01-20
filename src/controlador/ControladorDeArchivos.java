@@ -50,6 +50,13 @@ public class ControladorDeArchivos {
     public void verificar(JTextPane ep, List<String> codigo) {
         new DoInBackGroundVerificar(ep, codigo).execute();
     }
+    
+    /**
+    *
+    */
+    public void generarC(JTextPane ep, List<String> codigo){
+        
+    }
 //==============================================================================
 //  Métodos sin cuerpo.
 //==============================================================================

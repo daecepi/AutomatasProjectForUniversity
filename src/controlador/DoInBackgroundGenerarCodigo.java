@@ -29,9 +29,9 @@ public class DoInBackgroundGenerarCodigo extends SwingWorker<Void, Void>{
      * @param pane
      * @param codigo
      */
-    public DoInBackgroundGenerarCodigo(List<String> codigo, JTextPane pane) {
+    public DoInBackgroundGenerarCodigo(JTextPane ep, List<String> codigo) {
         this.codigo = codigo;
-        this.pane = pane;
+        this.pane = ep;
     }
     
     
