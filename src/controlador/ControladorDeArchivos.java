@@ -1,5 +1,6 @@
 package controlador;
 
+import java.awt.Component;
 import java.io.File;
 import java.util.List;
 import javax.swing.JTextPane;
@@ -54,8 +55,8 @@ public class ControladorDeArchivos {
     /**
     *
     */
-    public void generarC(JTextPane ep, List<String> codigo){
-        new DoInBackgroundGenerarCodigo(ep, codigo).execute();
+    public void generarC(Component componentContext, JTextPane ep, List<String> codigo){
+        new DoInBackgroundGenerarCodigo(componentContext, ep, codigo, "C").execute();
     }
 //==============================================================================
 //  Métodos sin cuerpo.

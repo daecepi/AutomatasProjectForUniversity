@@ -12,9 +12,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.File;
+import java.util.Arrays;
+import java.util.List;
 import javax.swing.JEditorPane;
 import javax.swing.JFileChooser;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPopupMenu;
 import javax.swing.JScrollPane;
 import javax.swing.JTextPane;
@@ -259,11 +262,11 @@ public class VPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
-        jMenu5.setText("Compile");
+        jMenu5.setText("Compilar");
 
         jMICompile.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         jMICompile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/iconos/validator.png"))); // NOI18N
-        jMICompile.setText("Compilar codigo");
+        jMICompile.setText("Compilar codigo a C");
         jMICompile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMICompileActionPerformed(evt);
@@ -437,13 +440,20 @@ public class VPrincipal extends javax.swing.JFrame {
 
     private void JMIInformacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMIInformacionActionPerformed
         
-        System.out.println("Hola mundo");
         new About(this, true).setVisible(true);
         
     }//GEN-LAST:event_JMIInformacionActionPerformed
 
     private void jMICompileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMICompileActionPerformed
-        // TODO add your handling code here:
+        // Consiguiendo el contexto donde se encuentra el codigo
+        JViewport viewport = ((JScrollPane) jTPArchivos.getSelectedComponent()).getViewport();
+        JTextPane textPane = (JTextPane) viewport.getView();
+        
+        // sacando el codigo
+        List<String> codigo = Arrays.asList(textPane.getText().split("\\n"));
+        
+        // Usando la informacion para correr el metodo generador
+        new ControladorDeArchivos().generarC(this, textPane, codigo);
     }//GEN-LAST:event_jMICompileActionPerformed
 
     public static void main(String args[]) {

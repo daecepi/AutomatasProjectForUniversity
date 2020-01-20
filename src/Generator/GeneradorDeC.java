@@ -12,7 +12,7 @@ import logica.analizadorLexico.IDefaultToken;
  *
  * @author davidcermeno
  */
-public class CGenerator extends Generator{
+public class GeneradorDeC extends Generador{
      public String generateCode(List<IDefaultToken> tokens){
          String codeBuilt = "#include <stdio.h>; \n\n // function declaration";
          String mainFunctionCode = "";

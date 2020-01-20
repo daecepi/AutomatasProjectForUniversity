@@ -1,7 +1,7 @@
 package logica.codeGenerator;
 
 
-import Generator.Generator;
+import Generator.Generador;
 import java.util.List;
 import logica.analizadorLexico.IDefaultToken;
 
@@ -15,18 +15,18 @@ import logica.analizadorLexico.IDefaultToken;
  *
  * @author davidcermeno
  */
-public class CodeGenerator {
+public class GeneradorDeCodigo {
     
     private List<IDefaultToken> codeWords;
-    private Generator generator;
+    private Generador generador;
 
-    public CodeGenerator(List<IDefaultToken> codeWords, Generator generator) {
+    public GeneradorDeCodigo(List<IDefaultToken> codeWords, Generador generador) {
         this.codeWords = codeWords;
-        this.generator = generator;
+        this.generador = generador;
     }
     
     public String generateCode(List<IDefaultToken> tokens){
-        String codeRetrieved = generator.generateCode(tokens);
+        String codeRetrieved = generador.generateCode(tokens);
         
         return codeRetrieved;
     }

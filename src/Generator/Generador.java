@@ -12,7 +12,7 @@ import logica.analizadorLexico.IDefaultToken;
  *
  * @author davidcermeno
  */
-public class Generator {
+public class Generador {
     
     
     public String generateCode(List<IDefaultToken> tokens){

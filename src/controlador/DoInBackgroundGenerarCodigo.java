@@ -5,6 +5,7 @@
  */
 package controlador;
 
+import java.awt.Component;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -12,7 +13,6 @@ import javax.swing.JTextPane;
 import javax.swing.SwingWorker;
 import javax.swing.text.BadLocationException;
 import logica.ControlDeArchivos;
-import logica.codeGenerator.CodeGenerator;
 
 /**
  *
@@ -21,6 +21,8 @@ import logica.codeGenerator.CodeGenerator;
 public class DoInBackgroundGenerarCodigo extends SwingWorker<Void, Void>{
     private final List<String> codigo;
     private final JTextPane pane;
+    private String lenguaje;
+    private Component contexto;
 
 //==============================================================================
 //  Constructores y metodos de inicialización.
@@ -30,9 +32,11 @@ public class DoInBackgroundGenerarCodigo extends SwingWorker<Void, Void>{
      * @param pane
      * @param codigo
      */
-    public DoInBackgroundGenerarCodigo(JTextPane ep, List<String> codigo) {
+    public DoInBackgroundGenerarCodigo(Component context, JTextPane ep, List<String> codigo, String lenguage) {
+        this.contexto = contexto;
         this.codigo = codigo;
         this.pane = ep;
+        this.lenguaje = lenguaje;
     }
     
     
@@ -59,7 +63,7 @@ public class DoInBackgroundGenerarCodigo extends SwingWorker<Void, Void>{
                 }
             });
         }else{
-            String codeGenerated = new ControlDeArchivos().codeGenerate(codigo);
+            String codeGenerated = new ControlDeArchivos().codeGenerate(codigo, this.lenguaje);
             pane.setText("New file with code in C generated");
         }
         return null;
