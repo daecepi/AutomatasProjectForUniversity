@@ -1,6 +1,6 @@
 ## Proyecto de automatas
 
-**_**Note:**Readme will be updated to English once the teacher evaluates de project at the end of the semester_**
+**\_**Note:**Readme will be updated to English once the teacher evaluates de project at the end of the semester\_**
 
 ### Description
 
@@ -19,9 +19,9 @@ which after finished (by the user) and validated (by the program) should be save
 
 - [Java: JRE](https://www.java.com/en/download/)
 - [Java JDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-- [Netbeans]() (en que el proyecto esta hecho) (in which the project structure is based)
+- [Netbeans](https://netbeans.apache.org/download/index.html) (en que el proyecto esta hecho) (in which the project structure is based)
 
 ### Installation
 
 1. `Git clone` o descarga el proyecto/`git clone` or download the project
-2. Abre el co
+2. Abre el proyecto con netbeans
