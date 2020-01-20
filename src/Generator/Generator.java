@@ -5,10 +5,17 @@
  */
 package Generator;
 
+import java.util.List;
+import logica.analizadorLexico.IDefaultToken;
+
 /**
  *
  * @author davidcermeno
  */
 public class Generator {
     
+    
+    public String generateCode(List<IDefaultToken> tokens){
+        return "Instanciate specific generator";
+    }
 }
