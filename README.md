@@ -1,6 +1,6 @@
 ## Proyecto de automatas
 
-**\_**Note:**Readme will be updated to English once the teacher evaluates de project at the end of the semester\_**
+**_**Note:**Readme will be updated to English once the teacher evaluates de project at the end of the semester_**
 
 ### Description
 
