@@ -9,6 +9,9 @@ import archivos.FPArchivos;
 import archivos.IFP;
 import archivos.SelectorDePersistencias;
 import java.util.List;
+import Generator.CGenerator;
+import logica.codeGenerator.CodeGenerator;
+import Generator.Generator;
 
 /**
  *
@@ -66,6 +69,18 @@ public final class ControlDeArchivos {
 
         return as.verificarCodigo(tokens);
     }
+    
+    public List<String> codeGenerate(List<String> codigo){
+        IAL al  = AnalizadorLexico.getInstance();
+        List<IDefaultToken> tokens = al.getTokens(codigo);
+        Generator gen = new CGenerator();
+        
+        CodeGenerator generator = new CodeGenerator(tokens, gen);
+        
+        // Logica para generar C
+        return codigo;
+    }
+
 //==============================================================================
 //  Métodos sin cuerpo.
 //==============================================================================
