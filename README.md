@@ -1,6 +1,6 @@
 ## Proyecto de automatas
 
-**_**Note:**Readme will be updated to English once the teacher evaluates de project at the end of the semester_**
+***__Note:__Readme will be updated to English once the teacher evaluates de project at the end of the semester***
 
 ### Description
 
@@ -12,7 +12,7 @@ which after finished (by the user) and validated (by the program) should be save
 
 #### Key aspects
 
-- Uso de automatas para manejar el analisis de las sintaxis/ Usage of automatas to handle the analisys of the code's syntax.
+- Uso de automatas para manejar el analisis de las sintaxis / Usage of automatas to handle the analisys of the code's syntax.
 - Uso del patron MVC para aplicacion de escritorio / usage of MVC pattern for the desktop app
 
 ### Prequisites
