@@ -43,19 +43,23 @@ public class DoInBackgroundGenerarCodigo extends SwingWorker<Void, Void>{
         pane.setText("Generando...");
         List<String> errores = new ControlDeArchivos().verificarCódigo(codigo);
 
-        pane.setText(errores.size() + " error(es) encontrados.\n");
-        errores.stream().forEach(ln -> {
-            try {
-                pane.getDocument().insertString(pane.getDocument()
-                        .getLength(), "=============================\n",
-                        null);
-                pane.getDocument().insertString(pane.getDocument()
-                        .getLength(), ln + "\n", null);
-            } catch (BadLocationException ex) {
-                Logger.getLogger(ControladorDeArchivos.class.getName())
-                        .log(Level.SEVERE, null, ex);
-            }
-        });
+        if(errores.size() > 1){
+            pane.setText(errores.size() + " error(es) encontrados.\n");
+            errores.stream().forEach(ln -> {
+                try {
+                    pane.getDocument().insertString(pane.getDocument()
+                            .getLength(), "=============================\n",
+                            null);
+                    pane.getDocument().insertString(pane.getDocument()
+                            .getLength(), ln + "\n", null);
+                } catch (BadLocationException ex) {
+                    Logger.getLogger(ControladorDeArchivos.class.getName())
+                            .log(Level.SEVERE, null, ex);
+                }
+            });
+        }else{
+            pane.setText("New file with code in C generated");
+        }
         return null;
     }
 //==============================================================================
