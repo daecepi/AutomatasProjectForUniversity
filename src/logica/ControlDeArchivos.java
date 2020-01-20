@@ -70,7 +70,7 @@ public final class ControlDeArchivos {
         return as.verificarCodigo(tokens);
     }
     
-    public List<String> codeGenerate(List<String> codigo){
+    public String codeGenerate(List<String> codigo){
         IAL al  = AnalizadorLexico.getInstance();
         List<IDefaultToken> tokens = al.getTokens(codigo);
         Generator gen = new CGenerator();
@@ -78,7 +78,7 @@ public final class ControlDeArchivos {
         CodeGenerator generator = new CodeGenerator(tokens, gen);
         
         // Logica para generar C
-        return codigo;
+        return generator.generateCode(tokens);
     }
 
 //==============================================================================

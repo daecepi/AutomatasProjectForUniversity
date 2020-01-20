@@ -12,6 +12,7 @@ import javax.swing.JTextPane;
 import javax.swing.SwingWorker;
 import javax.swing.text.BadLocationException;
 import logica.ControlDeArchivos;
+import logica.codeGenerator.CodeGenerator;
 
 /**
  *
@@ -58,7 +59,7 @@ public class DoInBackgroundGenerarCodigo extends SwingWorker<Void, Void>{
                 }
             });
         }else{
-            
+            String codeGenerated = new ControlDeArchivos().codeGenerate(codigo);
             pane.setText("New file with code in C generated");
         }
         return null;

@@ -55,11 +55,9 @@ public class About extends javax.swing.JDialog {
 
         jLabel1.setText("Integrantes:");
 
-        jLabel2.setText("Pedro Arce");
+        jLabel2.setText("David Cermeño");
 
-        jLabel3.setText("Alvaro Martinez");
-
-        jLabel4.setText("Oscar Quesedo");
+        jLabel3.setText("Rafael Mendoza");
 
         jLabel5.setText("Profesor: Luis Carlos Tovar");
 

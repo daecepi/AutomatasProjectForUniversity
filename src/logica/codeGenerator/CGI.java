@@ -13,5 +13,5 @@ import logica.analizadorLexico.IDefaultToken;
  * @author davidcermeno
  */
 public interface CGI {
-    public List<String> generateCode(List<IDefaultToken> tokens);
+    public String generateCode(List<IDefaultToken> tokens);
 }

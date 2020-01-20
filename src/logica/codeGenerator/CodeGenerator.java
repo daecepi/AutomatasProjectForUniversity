@@ -25,7 +25,9 @@ public class CodeGenerator {
         this.generator = generator;
     }
     
-    public void generateCode(List<IDefaultToken> tokens){
+    public String generateCode(List<IDefaultToken> tokens){
+        String codeRetrieved = generator.generateCode(tokens);
         
+        return codeRetrieved;
     }
 }
