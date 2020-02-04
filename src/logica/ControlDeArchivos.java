@@ -11,6 +11,7 @@ import archivos.SelectorDePersistencias;
 import java.util.List;
 import Generator.GeneradorDeC;
 import logica.codeGenerator.GeneradorDeCodigo;
+import logica.codeGenerator.CGI;
 import Generator.Generador;
 
 /**
@@ -56,6 +57,7 @@ public final class ControlDeArchivos {
                 .getPersistencias(FPArchivos.ARCHIVOS_PLANO)
                 .leer(path);
     }
+    
 
     /**
      *
@@ -76,17 +78,24 @@ public final class ControlDeArchivos {
     public String codeGenerate(List<String> codigo, String lenguaje){
         IAL al  = AnalizadorLexico.getInstance();
         List<IDefaultToken> tokens = al.getTokens(codigo);
-        Generador gen = selectorDegenerador(lenguaje);
         
-        GeneradorDeCodigo generator = new GeneradorDeCodigo(tokens, gen);
+        System.out.println(tokens);
+        Generador gen = selectorDeGenerador(lenguaje);
+        
+        
+        CGI generator = new GeneradorDeCodigo(tokens, gen);
         
         // Logica para generar C
         return generator.generateCode(tokens);
     }
 
+    public String getExtension(String lenguaje){
+        Generador gen = selectorDeGenerador(lenguaje);
+        
+        return gen.getGeneratorExtension();
+    }
     
-    
-    private Generador selectorDegenerador(String lenguaje){
+    private Generador selectorDeGenerador(String lenguaje){
         switch(lenguaje){
             case "C":
                 return new GeneradorDeC();

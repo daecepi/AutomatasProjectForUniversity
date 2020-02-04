@@ -9,6 +9,7 @@ import java.awt.Component;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.JTextPane;
 import javax.swing.SwingWorker;
 import javax.swing.text.BadLocationException;
@@ -29,13 +30,16 @@ public class DoInBackgroundGenerarCodigo extends SwingWorker<Void, Void>{
 //==============================================================================
     /**
      * Constructor por defecto.
-     * @param pane
-     * @param codigo
+     * @param contexto : maneja el contexto del cualquier Pop-up
+     * @param pane : Maneja el contexto del Panel de texto donde se encuentra el codigo
+     * @param codigo : maneja el conjunto de token obtenido del codigo
+     * @param lenguaje : mantiene
      */
-    public DoInBackgroundGenerarCodigo(Component context, JTextPane ep, List<String> codigo, String lenguage) {
+    public DoInBackgroundGenerarCodigo(Component contexto, JTextPane ep, List<String> codigo, String lenguaje) {
         this.contexto = contexto;
         this.codigo = codigo;
         this.pane = ep;
+        System.out.println("Contructor"+lenguaje);
         this.lenguaje = lenguaje;
     }
     
@@ -63,8 +67,12 @@ public class DoInBackgroundGenerarCodigo extends SwingWorker<Void, Void>{
                 }
             });
         }else{
-            String codeGenerated = new ControlDeArchivos().codeGenerate(codigo, this.lenguaje);
-            pane.setText("New file with code in C generated");
+            //String nameOfFileGotten = JOptionPane.showInputDialog(this.contexto, pane, lenguaje);
+            System.out.println("Entrando en la generacion");
+            String codeGenerated = new ControlDeArchivos().codeGenerate(codigo, lenguaje);
+            System.out.println("Code "+codigo);
+            // new ControlDeArchivos().guardarArchivo(codeGenerated, System.getProperty("user.home") + "/Desktop/" + nameOfFileGotten + new ControlArchivos().getExtension(lenguaje));
+            // pane.setText("New file with code in C generated");
         }
         return null;
     }

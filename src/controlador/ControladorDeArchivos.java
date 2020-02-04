@@ -56,6 +56,7 @@ public class ControladorDeArchivos {
     * Método para contactar al controlador que maneja la conversión a determinado Lenguaje 
     */
     public void generarC(Component componentContext, JTextPane ep, List<String> codigo){
+        
         new DoInBackgroundGenerarCodigo(componentContext, ep, codigo, "C").execute();
     }
 //==============================================================================

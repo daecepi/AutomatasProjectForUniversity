@@ -77,39 +77,39 @@ public final class AnalizadorLexico implements IAL {
     private String getTipoToken(String sCode) {
         if (REGEX_VACIO.matcher(sCode).find()) {
             //Línea vacía.
-            System.err.println("Vacío");
+            // System.err.println("Vacío");
             return "Vacío";
         } else if (REGEX_COMENZAR.matcher(sCode).find()) {
             //Expresión INICIAR
-            System.err.println("START");
+            //System.err.println("START");
             return "Start";
         } else if (REGEX_FINALIZAR.matcher(sCode).find()) {
             //Expresión FINALIZAR
-            System.err.println("FINALIZE");
+            //System.err.println("FINALIZE");
             return "Finalize";
         } else if (REGEX_ASIGNACIONES.matcher(sCode).find()) {
             //Expresión de asignación.
-            System.err.println("Asignación");
+            //System.err.println("Asignación");
             return "Asignación";
         } else if (REGEX_LLAMADA.matcher(sCode).find()) {
             //Llamada a función.
-            System.err.println("Llamada");
+            //System.err.println("Llamada");
             return "Llamada";
         } else if (REGEX_APERTURA.matcher(sCode).find()) {
             //Expresión de apertura.
-            System.err.println("Apertura");
+            //System.err.println("Apertura");
             return "Apertura";
         } else if (REGEX_LEER.matcher(sCode).find()) {
             //Expresión leer.
-            System.err.println("Leer");
+            //System.err.println("Leer");
             return "Leer";
         } else if (REGEX_ESCRIBIR.matcher(sCode).find()) {
             //Expresión escribir.
-            System.err.println("Escribir");
+            //System.err.println("Escribir");
             return "Escrebir";
         } else if (REGEX_CIERRES.matcher(sCode).find()) {
             //Expresión cerrar.
-            System.err.println("FIN");
+            //System.err.println("FIN");
             return "Cierre";
         }
 

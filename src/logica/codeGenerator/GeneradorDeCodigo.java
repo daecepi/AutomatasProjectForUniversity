@@ -15,18 +15,19 @@ import logica.analizadorLexico.IDefaultToken;
  *
  * @author davidcermeno
  */
-public class GeneradorDeCodigo {
+public class GeneradorDeCodigo implements CGI {
     
-    private List<IDefaultToken> codeWords;
     private Generador generador;
 
-    public GeneradorDeCodigo(List<IDefaultToken> codeWords, Generador generador) {
-        this.codeWords = codeWords;
+    public GeneradorDeCodigo() {
+    }
+    
+    public void addGenerator(Generador generador){
         this.generador = generador;
     }
     
     public String generateCode(List<IDefaultToken> tokens){
-        String codeRetrieved = generador.generateCode(tokens);
+        String codeRetrieved = this.generador.generateCode(tokens);
         
         return codeRetrieved;
     }
