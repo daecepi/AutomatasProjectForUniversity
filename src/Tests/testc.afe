@@ -1,0 +1,39 @@
+INICIO
+#aqui declaramos las variables.
+$nombre:="David ";
+$apellido:="Cerme;o";
+$nota1:=4;
+$nota2:=4.5;
+#imprimimos el nombre completo del estudiante.
+ESCRIBIR $nombre+$apellido;
+#almacenamos en la variable promedio el retorno de la funcion sacarpromedio
+$promedio:= $sacarPromedio($nota1,$nota2);
+#condicional para que el estudiante este activo  o no
+SI($promedio>3):
+$activo:=V;
+SINO:
+$activo:=F;
+FIN
+$jornadas:={"dia", "noche"};
+$hora:=14;
+
+MIENTRAS($hora>14):
+$jornada:=$jornadas[1];
+FIN
+
+
+PARA($i:=1,+1,$i<14):
+$jornada:=$jornadas[0];
+$pos:=$i;
+$posicion:= $posi($pos);
+IMPRIMIR $posicion;
+FIN
+
+
+FINAL
+#Se declara la funcion general sacarPromedio
+$sacarPromedio($a,$b):
+RETORNO $a+$b;
+
+$posi($z):
+RETORNO "La Posicion es "+$z;

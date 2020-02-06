@@ -1,0 +1,11 @@
+INICIO
+#Código principal aquí.
+$a:=4;
+SI($a>1):
+$b:=5;
+FIN
+
+FINAL
+#Implementación de funciones aquí.
+$sumar($a,$b):
+RETORNO $a+$b;
