@@ -40,44 +40,61 @@ public class GeneradorDeC extends Generador{
          String mainFunctionCode = "";
          String functionDeclaration = "";
          String functionsDefinitions = "";
-         
+
+         List<IDefaultToken> mainTokensCopy = mainTokens;
+         mainFunctionCode += analizeBlock(mainTokensCopy);
+
+
+
          // Appeding code's end of program
          codeBuilt += functionDeclaration
                  + "\n\nint main(){\n"
                  + mainFunctionCode
                  + "return 0;\n}\n\n// Functions defined"
                  + functionsDefinitions;
-         
+
          return codeBuilt;
      }
+
+
 
     @Override
     public String analizeBlock(List<IDefaultToken> tokens){
         List<IDefaultToken> tokensCopy = tokens;
-        IDefaultToken token = null;
-        try{
-            token = tokensCopy.remove(0);
-        }catch (Exception e){
-            return null ;
-        }
+
+        System.out.println( "Size" + tokensCopy.size());
+
         String returned = "";
-         switch (token.getKey()){
-             case "Apertura":
-                 returned.concat(convertIf(token, tokensCopy));
-                 break;
-             case "Asignement":
-                 returned.concat(convertAssignement(token, tokensCopy));
-                break;
-             case "Escrebir":
-                 returned.concat(convertWrite(token, tokens));
-                 break;
-             case "Leer":
-                 returned = convertRead(token, tokens);
-                 break;
-             case "Vacío":
-                 returned = token.getValue();
-                 break;
-         }
+        for (int i = 0; i < tokensCopy.size(); i++){
+            IDefaultToken token = null;
+            try{
+                token = tokensCopy.remove(i);
+            }catch (Exception e){
+                return null ;
+            }
+            switch (token.getKey()){
+                case "Apertura":
+                    returned.concat(convertIf(token, tokensCopy));
+                    break;
+                case "Asignement":
+                    returned.concat(convertAssignement(token, tokensCopy));
+                    break;
+                case "Escrebir":
+                    returned.concat(convertWrite(token, tokens));
+                    break;
+                case "Leer":
+                    returned += convertRead(token, tokens);
+                    break;
+                case "Vacío":
+                    returned += token.getValue();
+                    break;
+                case "Cierre":
+                    returned += "}";
+                    break;
+            }
+            returned += "\n";
+
+        }
 
          return returned;
     }

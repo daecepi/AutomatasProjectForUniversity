@@ -30,7 +30,7 @@ public class GeneradorDeCodigo implements CGI {
     @Override
     public String generateCode(List<IDefaultToken> tokens){
         String codeRetrieved = this.generador.generateCode(tokens);
-        
+        System.out.println("Code retreived"+codeRetrieved);
         return codeRetrieved;
     }
 }
