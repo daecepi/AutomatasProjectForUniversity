@@ -67,12 +67,12 @@ public class DoInBackgroundGenerarCodigo extends SwingWorker<Void, Void>{
                 }
             });
         }else{
-            //String nameOfFileGotten = JOptionPane.showInputDialog(this.contexto, pane, lenguaje);
+            String nameOfFileGotten = JOptionPane.showInputDialog(this.contexto, pane, lenguaje);
             System.out.println("Entrando en la generacion");
             String codeGenerated = new ControlDeArchivos().codeGenerate(codigo, lenguaje);
             System.out.println("Code "+codigo);
-            // new ControlDeArchivos().guardarArchivo(codeGenerated, System.getProperty("user.home") + "/Desktop/" + nameOfFileGotten + new ControlArchivos().getExtension(lenguaje));
-            // pane.setText("New file with code in C generated");
+            new ControlDeArchivos().guardarArchivo(codeGenerated, System.getProperty("user.home") + "/Desktop/" + nameOfFileGotten + new ControlDeArchivos().getExtension(lenguaje));
+            pane.setText("New file with code in C generated");
         }
         return null;
     }

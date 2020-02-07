@@ -63,13 +63,13 @@ public class GeneradorDeC extends Generador{
         String returned = "";
          switch (token.getKey()){
              case "Apertura":
-                 returned = convertIf(token, tokensCopy);
+                 returned.concat(convertIf(token, tokensCopy));
                  break;
              case "Asignement":
-                 returned = convertAssignement(token, tokensCopy);
+                 returned.concat(convertAssignement(token, tokensCopy));
                 break;
              case "Escrebir":
-                 returned = convertWrite(token, tokens);
+                 returned.concat(convertWrite(token, tokens));
                  break;
              case "Leer":
                  returned = convertRead(token, tokens);
@@ -164,7 +164,7 @@ public class GeneradorDeC extends Generador{
 
 
     /*
-    * NOTIFICATION: currenctly reading only strings
+    * NOTIFICATION: currently reading only strings and not must be modified
     * */
     @Override
     public String convertRead(IDefaultToken token, List<IDefaultToken> tokens){
